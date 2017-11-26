@@ -20,3 +20,7 @@ sudo docker build -t <yourImageName> <DockerfileFolder>
 sudo docker run -it -d -p 5000:5000 -v /etc/letsencrypt:/etc/letsencrypt \
 -e DOMAIN=<yourDomain> <yourImageName>
 ```
+### 6.連線web
+```
+https://<yourDomain>:5000
+```
