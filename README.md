@@ -11,11 +11,11 @@ CMD gunicorn -w 3 -b 0.0.0.0:5000 wsgi \
 --certfile /etc/letsencrypt/live/$DOMAIN/cert.pem \
 --ca-certs /etc/letsencrypt/live/$DOMAIN/fullchain.pem
 ```
-###4.建立 Docker Image
+### 4.建立 Docker Image
 ```
 sudo docker build -t <yourImageName> <DockerfileFolder>
 ```
-###5.執行 Container
+### 5.執行 Container
 ```
 sudo docker run -it -d -p 5000:5000 -v /etc/letsencrypt:/etc/letsencrypt \
 -e DOMAIN=<yourDomain> <yourImageName>
